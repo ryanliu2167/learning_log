@@ -1,0 +1,10 @@
+#每条路由都描述了Platform.sh 该如何处理到来的请求(用URL表示)
+
+"https://{default}":
+    type: upstream
+    upstream: "learning_log:http"
+
+"https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
+
